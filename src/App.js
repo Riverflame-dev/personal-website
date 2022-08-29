@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion";
 
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 
+//Pages
 import Home from "./pages/home/index";
 import About from "./pages/about/index";
 import {Contact} from "./pages/home/contact";
