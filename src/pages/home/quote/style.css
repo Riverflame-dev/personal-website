@@ -1,0 +1,7 @@
+.quote-container {
+  height: 250px;
+  width: 100%;
+  background-color: rgb(186, 250, 247);
+  position: relative;
+  z-index: 2;
+}

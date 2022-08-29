@@ -1,0 +1,56 @@
+.App .back-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 2rem;
+  background-color: black;
+  z-index: 1000;
+  transition: all 0.4s;
+  text-decoration-line: none;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+  .back-to-top__image {
+    // height: 70%;
+    color: rgb(255, 255, 255);
+    font-size: 1.1rem;
+ 
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .s_c {
+    padding-top: 40px;
+  }
+}
+
+.page-enter {
+  transform: translateY(100%);
+}
+
+.page-enter-active {
+  transform: translateY(0%);
+  transition: all 400ms ease-out;
+}
+
+.page-exit {
+  transform: translateY(0%);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.page-exit-active {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  transform: translateY(-130%);
+  transition: all 400ms ease-out;
+}

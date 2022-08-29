@@ -1,0 +1,7 @@
+.skills-container {
+  height: 500px;
+  width: 100%;
+  background-color: pink;
+  position: relative;
+  z-index: 2;
+}

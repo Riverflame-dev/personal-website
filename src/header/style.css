@@ -1,0 +1,86 @@
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  z-index: 10;
+}
+
+a {
+  text-decoration: none;
+}
+
+.list {
+  list-style-type: none;
+  background-color: white;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: baseline;
+  position: relative;
+}
+
+.items {
+  margin-right: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  background-color: white;
+  transition: 400ms;
+}
+
+.items a {
+  background-color: white;
+}
+
+.items::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: black;
+  transition: width 0.3s;
+}
+.items:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.nav-btn {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  padding: 10px;
+  color: #000;
+  font-size: 18px;
+  background: none;
+  border: none;
+}
+
+@media screen and (max-width: 500px) {
+  nav {
+    background-color: transparent;
+  }
+
+  .list {
+    flex-direction: column;
+    height: auto;
+  }
+  .items:nth-child(1) {
+    border-top: 1px solid rgba(255, 255, 255, 0.555);
+    margin-top: 50px;
+  }
+  .items {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.555);
+    text-align: center;
+    margin-right: 0px;
+    padding: 20px 0;
+  }
+  .nav-btn {
+    display: block;
+  }
+}
