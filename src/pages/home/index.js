@@ -35,23 +35,11 @@ export default function Home() {
               />
             </h1>
             <p>{introdata.description}</p>
-            <Link to="/files/myfile.pdf" target="_blank" download>
-              <div id="button_p" className="ac_btn">
-                Resume
-                <div className="ring one"></div>
-                <div className="ring two"></div>
-                <div className="ring three"></div>
-              </div>
-            </Link>
-            <Link to="/files/myfile.pdf" target="_blank" download>
-              <div className="resume_btn">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
+            <div className="btn-container">
+            <Link className="resume-btn" to="/files/myfile.pdf" target="_blank" download>
                 Download Resume
-              </div>
             </Link>
+            </div>
           </div>
         </div>
       </section>

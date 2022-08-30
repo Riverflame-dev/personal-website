@@ -86,8 +86,8 @@ p {
 // Font size variables
 h1 {
   --min: 2em; // minimum value
-  --val: 5vw; // preferred value = 5% viewport width
-  --max: 3em; // maximum value
+  --val: 8vw; // preferred value = 5% viewport width
+  --max: 4em; // maximum value
 }
 h2 {
   --min: 1.5em; /* minimum value */
@@ -101,7 +101,7 @@ h3 {
 }
 p {
   --min: 1em; // minimum value
-  --val: 1vw; // preferred value = 2.5% viewport width
+  --val: 0.8vw; // preferred value = 2.5% viewport width
   --max: 1.5em; // maximum value
 }
 
