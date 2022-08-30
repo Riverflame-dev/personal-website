@@ -1,0 +1,50 @@
+.text3d-container {
+  font-family: sans-serif;
+  top: 50px;
+  margin-top: 13%;
+  margin-left: 53%;
+  margin-right: auto;
+  width: 400px;
+  height: auto;
+}
+#text {
+  position: relative;
+  color: #3ccfb7;
+  font-weight: 600;
+  font-size: 6em;
+  line-height: 0.9em;
+  letter-spacing: 2px;
+  text-align: left;
+  transform: rotate(-18deg) skew(20deg);
+}
+#text:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 20px;
+  left: -30px;
+  color: rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0 10px #6fedd6, 0 0 20px #6fedd6, 0 0 40px #6fedd6,
+    0 0 80px #6fedd6;
+  filter: blur(8px);
+  z-index: -1;
+  text-align: left;
+  transition: 1s;
+}
+
+
+.text3d-container {
+
+  transition:
+    .4s ease-in-out transform,
+    .4s ease-in-out box-shadow;
+
+  &:hover {
+    transform:
+      translate3d(0px, -16px, 0px);
+
+      #text:before {
+        text-shadow: 0 0 10px #6fedd6;
+      }
+    }
+
+}

@@ -13,7 +13,7 @@ import {Contact} from "./pages/home/contact";
 import NavBar from "./header/header";
 import { Socialicons } from "./components/socialicons";
 import ScrollToTop from "./components/ScrollToTop";
-import AnimatedCanvas from "./components/AnimatedCanvas";
+import AnimatedCanvas from "./components/canvas/AnimatedCanvas";
 import "./App.scss";
 
 function App() {
@@ -39,7 +39,7 @@ function App() {
       <ScrollToTop />
 
       <motion.div className="App">
-        <AnimatedCanvas />
+        
         <NavBar />
 
         <AnimatePresence>

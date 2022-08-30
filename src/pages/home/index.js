@@ -1,15 +1,14 @@
 import React from "react";
-import "./style.css";
+import "./style.scss";
 import Typewriter from "typewriter-effect";
 import { introdata, meta } from "../../content_option";
 import { Link } from "react-router-dom";
 
-import Skills from "./skills";
-import Quote from "./quote";
+import AboutMe from "./aboutme";
+import Projects from "./projects";
 //import { Contact } from "./contact";
 import { Contact } from "./contact";
-
-// <img src={url} className="bg_imag" alt=""></img>
+import Text3D from "../../components/text3d/Text3D";
 
 const url =
   "https://www.thesprucepets.com/thmb/N7k7EFMi1xuZ57sYd_Nk9JZKIYc=/4005x3004/smart/filters:no_upscale()/facts-about-siamese-cats-4173491-hero-5a607df9e57b40a58c803a76859b6694.jpg";
@@ -18,9 +17,9 @@ export default function Home() {
     <>
       <section id="home" className="home">
         <div className="home-content">
-          <div className="my-image"></div>
+          <div className="welcome"><Text3D/></div>
           <div className="intro">
-            <h2>{introdata.title}</h2>
+            <h3>Hi I am <span>Yilei Li</span></h3>
             <h1>
               <Typewriter
                 options={{
@@ -35,7 +34,7 @@ export default function Home() {
                 }}
               />
             </h1>
-            <p className="mb-1x">{introdata.description}</p>
+            <p>{introdata.description}</p>
             <Link to="/files/myfile.pdf" target="_blank" download>
               <div id="button_p" className="ac_btn">
                 Resume
@@ -44,17 +43,26 @@ export default function Home() {
                 <div className="ring three"></div>
               </div>
             </Link>
+            <Link to="/files/myfile.pdf" target="_blank" download>
+              <div className="resume_btn">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+                Download Resume
+              </div>
+            </Link>
           </div>
         </div>
       </section>
 
-      <section id="skills">
-        <Skills />
+      <section id="about-section">
+        <AboutMe />
       </section>
-      <section id="quote">
-        <Quote />
+      <section id="project-section">
+        <Projects />
       </section>
-      <section id="contact">
+      <section id="contact-section">
         <Contact />
       </section>
     </>

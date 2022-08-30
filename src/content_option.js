@@ -5,14 +5,14 @@ const meta = {
 };
 
 const introdata = {
-  title: "I’m Yilei Li",
+  title: "Hi, I am Yilei Li",
   animated: {
     first: "a Software Engineer.",
     second: "a creative developer.",
     third: "I love technologies."
   },
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum ur adipiscing elit. Sed at nisl euismod urna bibendum",
   your_img_url:
     "https://www.thesprucepets.com/thmb/N7k7EFMi1xuZ57sYd_Nk9JZKIYc=/4005x3004/smart/filters:no_upscale()/facts-about-siamese-cats-4173491-hero-5a607df9e57b40a58c803a76859b6694.jpg"
 };
