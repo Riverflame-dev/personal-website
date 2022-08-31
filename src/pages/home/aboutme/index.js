@@ -4,6 +4,7 @@ import "./style.scss";
 export default function AboutMe() {
   return (
     <div className="about-me-container">
+      <div className="overlay"></div>
       <div class="h-initial">About Me</div>
       <div className="info-tab">
         <div className="tab-content">
