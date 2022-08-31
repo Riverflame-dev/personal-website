@@ -30,6 +30,21 @@ $bg_url: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='
   font-style: normal;
 }
 
+@mixin neon-border($color,$rgba,$inset,$x,$y){
+  // $color - border color, $rgba - shadow, $inset - true/false
+  border: 2px solid $color;
+  @if $inset == 'true' {
+    -webkit-box-shadow: 0px 0px $x $y $rgba, inset 0px 0px $x $y $rgba;
+    -moz-box-shadow:    0px 0px $x $y $rgba, inset 0px 0px $x $y $rgba;
+    box-shadow:         0px 0px $x $y $rgba, inset 0px 0px $x $y $rgba;
+  }@else if $inset == 'false'{
+    -webkit-box-shadow: 0px 0px $x $y $rgba;
+    -moz-box-shadow:    0px 0px $x $y $rgba;
+    box-shadow:         0px 0px $x $y $rgba;
+  }
+}
+
+
 :root {
   --bg-color: #1e1c22;
   --primary-color: #ffffff;

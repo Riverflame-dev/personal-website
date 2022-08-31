@@ -15,6 +15,7 @@ const url =
 export default function Home() {
   return (
     <>
+    <div className="page-container">
       <section id="home" className="home">
         <div className="home-content">
           <div className="welcome"><Text3D/></div>
@@ -53,6 +54,7 @@ export default function Home() {
       <section id="contact-section">
         <Contact />
       </section>
+      </div>
     </>
   );
 }
