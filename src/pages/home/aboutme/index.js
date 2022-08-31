@@ -1,10 +1,10 @@
 import React from "react";
 import "./style.scss";
+import "../../../fonts/Exwayer-X3eqa.ttf";
 
 export default function AboutMe() {
   return (
     <div className="about-me-container">
-      <div className="overlay"></div>
       <div class="h-initial">About Me</div>
       <div className="info-tab">
         <div className="tab-content">
@@ -15,7 +15,7 @@ export default function AboutMe() {
           aria-controls="tabone"
           checked
         ></input>
-          <label for="tab1">
+          <label className="label-font" for="tab1">
             <div>:// start</div>
           </label>
 
@@ -25,10 +25,11 @@ export default function AboutMe() {
             id="tab2"
             aria-controls="tabtwo"
           ></input>
-          <label for="tab2">
+          <label className="label-font" for="tab2">
             <div>:// extras</div>
           </label>
           <div className="tab-panels">
+          <div className="overlay"></div>
             <section className="panel">
               <h2>
                 <span>
@@ -52,6 +53,22 @@ export default function AboutMe() {
                 place in NeoCity and the locals aren't shy about showing
                 it.
               </p>
+            </section>
+            <section className="panel">
+              <h2>
+                <span>
+                  <span
+                    class="iconify"
+                    data-icon="mdi:virus-outline"
+                    data-inline="false"
+                  ></span>{" "}
+                  Some info
+                </span>
+              </h2>
+              <p>
+                This is a paragraph of information
+              </p>
+              <div className="panel-image border blue"></div>
             </section>
           </div>
         </div>
