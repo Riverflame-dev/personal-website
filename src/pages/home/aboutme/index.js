@@ -31,13 +31,9 @@ export default function AboutMe() {
           <div className="tab-panels">
           <div className="overlay"></div>
             <section className="panel">
-              <h2>
+              <h2 className="title-font">
                 <span>
-                  <span
-                    class="iconify"
-                    data-icon="mdi:virus-outline"
-                    data-inline="false"
-                  ></span>{" "}
+                  <span></span>{" "}
                   Intro
                 </span>
               </h2>
@@ -55,13 +51,9 @@ export default function AboutMe() {
               </p>
             </section>
             <section className="panel">
-              <h2>
+              <h2 className="title-font">
                 <span>
-                  <span
-                    class="iconify"
-                    data-icon="mdi:virus-outline"
-                    data-inline="false"
-                  ></span>{" "}
+                  <span></span>{" "}
                   Some info
                 </span>
               </h2>

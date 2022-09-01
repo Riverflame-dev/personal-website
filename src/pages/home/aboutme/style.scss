@@ -3,6 +3,7 @@ $blue: #3AF1D9;
 $left: -5px 0 5px -5px $border-color;
 $border: 3px solid $border-color;
 
+// Font
 @font-face {
   font-family: "Exwayer";
   src: local("font"),
@@ -18,6 +19,15 @@ $border: 3px solid $border-color;
   font-weight: 300;
 }
 
+.title-font {
+  font-weight: 100px;
+  letter-spacing: 3px;
+  font-family: "Exwayer";
+  font-size: 3em;
+  line-height: 0.2em;
+
+}
+
 .about-me-container {
   width: 100%;
   height: 100vh;
@@ -25,11 +35,12 @@ $border: 3px solid $border-color;
   z-index: 2;
   background-color: var(--bg-color);
   //backdrop-filter: blur(5px);
-  box-shadow: 0 0 200px 150px var(--bg-color);
+  box-shadow: 0 0 200px 100px var(--bg-color);
   background-size: 1000px 2px;
 }
 
 .h-initial {
+  visibility: hidden;
   position: absolute;
   align-items: center;
   bottom: 0px;
@@ -159,12 +170,6 @@ $border: 3px solid $border-color;
   display: none;
   padding: 30px;
   h2 {
-    font-weight: 100px;
-    letter-spacing: 3px;
-    font-family: "Exwayer";
-    font-size: 3em;
-    line-height: 0.2em;
-
     border-left: $border;
     border-bottom: $border;
     padding: 5px 10px 0;
@@ -273,7 +278,6 @@ $border: 3px solid $border-color;
   }
 }
 
-
 // @mixin
 @mixin neon-border($color,$rgba,$inset,$x,$y){
   // $color - border color, $rgba - shadow, $inset - true/false
@@ -288,6 +292,7 @@ $border: 3px solid $border-color;
     box-shadow:         0px 0px $x $y $rgba;
   }
 }
+
 
 //neon border
 .border{

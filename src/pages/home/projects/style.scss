@@ -1,0 +1,134 @@
+.projects-container {
+  height: 200%;
+  width: 100%;
+  position: relative;
+  margin: auto;
+  padding-top: 30px;
+  width: 75%;
+}
+
+.projects-intro{
+  width:50vw;
+  height:15vw;
+
+
+}
+.featured-project{
+  width:75vw;
+  height:30vw;
+  margin: auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 10px;
+  -webkit-box-align: center; //figure out webkit
+  align-items: center;
+
+  @media (max-width: 768px) {
+    margin-bottom: 70px;
+  }
+  @media (max-width: 480px) {
+    margin-bottom: 30px;
+  }
+
+  .featured-img {
+
+    grid-row: 1;
+    grid-column: 1 / 8;
+    box-shadow: 0 10px 30px -15px navy;
+    //transition: var(--transition);
+    position: relative;
+    z-index: 1;
+    img {
+      width:100%;
+      height:auto;
+    }
+
+  }
+
+}
+
+.featured-content{
+  grid-row: 1;
+  grid-column: 7 / -1;
+  text-align: right;
+  position: relative;
+  z-index: 2;
+  
+  @media (max-width: 1080px) {
+    grid-column: 5 / -1;
+  }
+  @media (max-width: 768px) {
+    grid-column: 1 / -1;
+    padding: 40px 40px 30px;
+    text-align: left;
+  }
+  @media (max-width: 480px) {
+    padding: 25px 25px 20px;
+  }
+
+
+  .project-overline {
+    margin: 10px 0px;
+  }
+  .project-title {
+    margin: 0px 0px 20px;
+  }
+  .project-description {
+    box-shadow: 0 10px 30px -15px navy;
+    //transition: var(--transition);
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: navy;
+    background: linear-gradient(-45deg, blue 25px, transparent 0);
+    border: 3px solid blue;
+ 
+    backdrop-filter: blur(30px);
+  }
+  .project-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+    margin: 25px 0px 10px;
+    padding: 0px;
+    list-style: none;
+    justify-content: flex-end;
+    li {
+      display: list-item;
+      text-align: -webkit-match-parent;
+      margin: 0px 0px 5px 20px;
+  }
+  
+  }
+  .project-links {
+    justify-content: flex-end;
+    margin-top:1em;
+    margin-left: 0;
+    margin-right: -10px;
+    position: relative;
+    color: white;
+
+    @media (max-width: 768px) {
+      justify-content: flex-start;
+      margin-left: -10px;
+      margin-right: 0;
+    }
+    
+    a {
+      padding: 10px;
+      .link-icon {
+        width: 22px;
+        height: 22px;
+        margin-top: -4px;
+      }
+    }
+  }
+
+}
+
+
+
