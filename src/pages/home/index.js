@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 import AboutMe from "./aboutme";
 import Projects from "./projects";
-//import { Contact } from "./contact";
+import Achrive from "./achrive";
 import { Contact } from "./contact";
 import Text3D from "../../components/text3d/Text3D";
 
@@ -50,6 +50,9 @@ export default function Home() {
       </section>
       <section id="project-section">
         <Projects />
+      </section>
+      <section id="achrive-section">
+        <Achrive />
       </section>
       <section id="contact-section">
         <Contact />
