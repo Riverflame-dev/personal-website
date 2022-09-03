@@ -72,7 +72,7 @@
 .featured-img {
   grid-row: 1;
   grid-column: 1 / 8;
-  box-shadow: 0 10px 30px -15px navy;
+  box-shadow: 0 10px 30px -15px black !important;
   //transition: var(--transition);
   position: relative;
   z-index: 1;
@@ -106,9 +106,9 @@
     border-radius: 3px;
 
     background: linear-gradient(-45deg, rgb(236, 255, 30) 25px, transparent 0);
-    border: 3px solid transparent;
+    border: 3px solid yellow;
  
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(1px);
   }
   .project-tech-list {
     display: flex;
