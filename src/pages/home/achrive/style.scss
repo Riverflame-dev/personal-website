@@ -38,3 +38,17 @@
     transition: 0.5s;
     overflow: auto;
   }
+
+  .project-tech-list {
+    display: flex;
+    align-items: flex-end;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 20px 0px 0px;
+    list-style: none;
+    li:not(:last-of-type) {
+        margin-right: 15px;
+    }
+}
