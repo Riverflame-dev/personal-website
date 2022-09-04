@@ -8,7 +8,6 @@ export default function Projects() {
     <div className="projects-container">
       <div className="projects-intro">
         <h1>Projects</h1>
-        <p>Here i will be displaying some projects that I was involved in.</p>
       </div>
       <ul className="featured-list">
         <li className="featured-project">
