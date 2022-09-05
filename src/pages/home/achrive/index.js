@@ -1,5 +1,8 @@
 import React from "react";
 import "./style.scss";
+import { FaExternalLinkAlt, FaRegFile } from 'react-icons/fa';
+import { FiGithub } from "react-icons/fi";
+
 
 export default function Achrive() {
     return (
@@ -16,7 +19,7 @@ export default function Achrive() {
                             <div className="links"></div>
                         </div>
                         <h3 className="project-title">
-                            This is a project title
+                            Project 3
                         </h3>
                         <div className="project-description">
                             <p>This is a paragraph of description text.</p>
