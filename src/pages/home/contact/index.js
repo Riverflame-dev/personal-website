@@ -102,12 +102,13 @@ export const Contact = () => {
         <div className="col-text">
           <h3>Get in touch</h3>
           <address>
+            <p>
             <strong>Email:</strong>{" "}
             <a href={`mailto:${contactConfig.YOUR_EMAIL}`}>
               {contactConfig.YOUR_EMAIL}
             </a>
-            <br />
-            <br />
+            </p>
+          
             {contactConfig.hasOwnProperty("YOUR_FONE") ? (
               <p>
                 <strong>Phone:</strong> {contactConfig.YOUR_FONE}
