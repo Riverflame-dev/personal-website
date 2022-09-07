@@ -16,13 +16,20 @@ export default function Achrive() {
                     <header>
                         <div className="project-top">
                             <div className="folder"></div>
-                            <div className="links"></div>
+                            <div className="links">
+                                <a href="https://github.com/bchiang7/halcyon-site" aria-label="File Link" rel="noopener noreferrer" target="_blank">
+                                    <FiGithub className="link-icon"/>
+                                </a>
+                                <a href="https://verabradley.com/products/xl-campus-backpack-2845413063?variant=40445993156652" aria-label="External Link" class="external" rel="noopener noreferrer" target="_blank">
+                                    <FaExternalLinkAlt className="link-icon"/>
+                                </a>
+                            </div>
                         </div>
                         <h3 className="project-title">
-                            Project 3
+                            IoT Gateway
                         </h3>
                         <div className="project-description">
-                            <p>This is a paragraph of description text.</p>
+                            <p>Design, developed, and tested IoT solution for remote device monitoring and troubleshooting for a multinational industry dominant company.</p>
                         </div>
                     </header>
                     <footer>

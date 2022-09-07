@@ -25,19 +25,49 @@
 .achrive-item {
     position: relative;
     cursor: default;
+    height: fit-content;
 }
 
 .item-inner {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     position: relative;
     height: 100%;
     padding: 2rem 1.75rem;
     border-radius: 3px;
-    background-color: pink;
+
     transition: 0.5s;
     overflow: auto;
+
+    border-radius: 3px;
+    background: linear-gradient(-45deg, rgb(236, 255, 30) 25px, transparent 0);
+    border: 3px solid yellow;
+    backdrop-filter: blur(1px);
+    &:hover {
+        box-shadow: 0 0 10px yellow, 0 0 20px yellow;
+    }
+    
   }
+
+  .project-top {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+
+    .links {
+        display: flex;
+        a {
+            padding: 0px 10px;
+        .link-icon {
+            width: 22px;
+            height: 22px;
+            margin-top: -4px;
+            }
+        }
+      }
+  }
+  
 
   .project-tech-list {
     display: flex;
