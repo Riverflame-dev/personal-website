@@ -5,6 +5,4 @@ class Project(Document):
     description = StringField(required=True)
     tech_list = ListField(StringField(required=False))
     link_list = ListField(StringField(required=False))
-
-    meta = {"collection": "Project"}
     
