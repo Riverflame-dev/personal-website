@@ -44,7 +44,8 @@
 }
 
 .page-content{
-
+  display: flex;
+  flex-direction: column;
 }
 
 .my-img {
@@ -52,5 +53,5 @@
 }
 
 .skills-title{
-  
+
 }
