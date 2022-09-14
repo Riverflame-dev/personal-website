@@ -12,6 +12,7 @@ export default function About() {
         </div>
         <span className="empty-span"></span>
         <div className="page-content">
+          <div className="my-intro">
           <p>Yilei Li aims to engineer, innovate, and impact these technologies and the lives they affect. She is an
 international honors student from China. She is graduating from Purdue Fort Wayne in May ‘22 with a degree
 in computer engineering (B.S) and a minor in mathematics. She was listed as part of the Dean’s & Semester
@@ -23,6 +24,10 @@ and has worked as a LEAD peer mentor for one year through the ETCS Student Succe
 
 After graduation, Yilei intends to pursue a master’s degree with a teaching assistantship to deepen her
 academic view while continuing to help students succeed in their pursuits. </p>
+        </div>
+        <div className="my-image">
+          
+        </div>
         </div>
 
         <br />
