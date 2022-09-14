@@ -11,7 +11,9 @@ export default function About() {
           <h1>About()</h1>
         </div>
         <span className="empty-span"></span>
+
         <div className="page-content">
+          <div className="content-1-about">
           <div className="my-intro">
           <p>Yilei Li aims to engineer, innovate, and impact these technologies and the lives they affect. She is an
 international honors student from China. She is graduating from Purdue Fort Wayne in May ‘22 with a degree
@@ -25,9 +27,15 @@ and has worked as a LEAD peer mentor for one year through the ETCS Student Succe
 After graduation, Yilei intends to pursue a master’s degree with a teaching assistantship to deepen her
 academic view while continuing to help students succeed in their pursuits. </p>
         </div>
-        <div className="my-image">
-          
+        <div className="my-img">
+
         </div>
+
+        </div>
+
+        <div className="content-2-skills"> </div>
+        <div className="content-3-experience"> </div>
+
         </div>
 
         <br />
