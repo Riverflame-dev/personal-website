@@ -230,8 +230,6 @@ const draw = (ctx, height, width) => {
 
     time_n = time_n + 1;
 
-    // DrawImg(0,0, pathArr, 50);
-    // sleep(10);
     window.requestAnimationFrame(frame);
   })();
 };
