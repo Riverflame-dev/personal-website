@@ -203,7 +203,7 @@ const draw = (ctx, height, width) => {
    * ********************************************************/
 
   initImgs(pathArr.length); // number of patharr
-  initImg(0, 100, 11, 3);
+  initImg(0, 0, 11, 1);
 
   /************************************************************
    * 绘图， 调用DrawImg(cx, cy, imgIndex=0, speed=1)
