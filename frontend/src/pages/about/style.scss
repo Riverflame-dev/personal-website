@@ -49,8 +49,17 @@
   flex-wrap: wrap;
 }
 
-.my-intro {
+.content-1-about{
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 0px;
+}
 
+.my-intro {
+  padding: 20px;
 }
 
 .my-img {
