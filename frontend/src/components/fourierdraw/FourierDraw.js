@@ -190,8 +190,6 @@ const draw = (ctx, height, width) => {
     var cH = window.innerHeight;
     c.width = cW * devicePixelRatio;
     c.height = cH * devicePixelRatio;
-    //width = cW * devicePixelRatio;
-    //height = cH * devicePixelRatio;
     ctx.scale(devicePixelRatio, devicePixelRatio);
   };
   /************************************************************
