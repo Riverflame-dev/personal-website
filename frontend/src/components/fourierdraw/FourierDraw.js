@@ -215,15 +215,9 @@ const draw = (ctx, height, width, lineWidth, enlarge, cx, cy) => {
 
   initImgs(pathArr.length); // number of patharr
   //initImg(0, 500, 11, 1);
-  if (
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    )
-  ) {
+  
     initImg(0, 500, 11, enlarge);
-  } else {
-    initImg(0, 500, 11, enlarge);
-  }
+  
   /************************************************************
    * 绘图， 调用DrawImg(cx, cy, imgIndex=0, speed=1)
    * cx：x坐标
