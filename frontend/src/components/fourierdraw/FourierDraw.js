@@ -13,7 +13,8 @@ import {
   get_Cn
 } from "./get_DFS.js";
 
-const draw = (ctx, height, width) => {
+
+const draw = (ctx, height, width, lineWidth, enlarge, cx, cy) => {
   var c = document.getElementById("c");
   var pathArr = [];
   pathArr[0] = shape[0];
@@ -56,7 +57,7 @@ const draw = (ctx, height, width) => {
       var r = Math.hypot(imgCn[imgIndex][k][0], imgCn[imgIndex][k][1]);
       ctx.arc(p[0], p[1], r, 0, 2 * PI);
       ctx.lineWidth = 1;
-      ctx.strokeStyle = "rgba(" + randomx(255) + ",150,60,1.0)";
+      ctx.strokeStyle = "#3B6E75";
       if (k !== 0) {
         ctx.stroke();
       }
@@ -90,8 +91,8 @@ const draw = (ctx, height, width) => {
     values_x[imgIndex][valuePointer[imgIndex] & pointCount[imgIndex]] = x;
     values_y[imgIndex][valuePointer[imgIndex] & pointCount[imgIndex]] = y;
     ctx.beginPath();
-    ctx.lineWidth = 2;
-    ctx.strokeStyle = "rgba(255,100,200,1)";
+    ctx.lineWidth = lineWidth;
+    ctx.strokeStyle = "#FEE101";
     // context.strokeStyle = "rgba(" + randomx(205) + "," + randomx(125)+","+randomx(125)+",1.0)";
 
     ctx.moveTo(x, y);
@@ -118,7 +119,7 @@ const draw = (ctx, height, width) => {
       ctx.lineTo(p[0], p[1]);
     }
     ctx.lineWidth = 1;
-    ctx.strokeStyle = "rgba(255,255,255,0.8)";
+    ctx.strokeStyle = "rgba(255,255,255,0.5)";
     // context.strokeStyle = "rgba(" + randomx(255) + "," + randomx(255) + "," + randomx(255) + ",0.5)";
 
     ctx.stroke();
@@ -186,10 +187,22 @@ const draw = (ctx, height, width) => {
   //pathArr[0] = shape;
 
   var resizeCanvas = function () {
-    var cW = window.innerWidth;
-    var cH = window.innerHeight;
+    /*
+    var ratio = height / width;
+    var cW = 0.5 * window.innerWidth;
+    var cH = cW * ratio;
+    if (width < cW * devicePixelRatio) {
     c.width = cW * devicePixelRatio;
     c.height = cH * devicePixelRatio;
+    }else {
+      c.width = width;
+      c.height = height;
+    }
+    */
+    //width = cW * devicePixelRatio;
+    //height = cH * devicePixelRatio;
+    c.width = width;
+    c.height = height;
     ctx.scale(devicePixelRatio, devicePixelRatio);
   };
   /************************************************************
@@ -201,8 +214,16 @@ const draw = (ctx, height, width) => {
    * ********************************************************/
 
   initImgs(pathArr.length); // number of patharr
-  initImg(0, 0, 11, 1);
-
+  //initImg(0, 500, 11, 1);
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    initImg(0, 500, 11, enlarge);
+  } else {
+    initImg(0, 500, 11, enlarge);
+  }
   /************************************************************
    * 绘图， 调用DrawImg(cx, cy, imgIndex=0, speed=1)
    * cx：x坐标
@@ -214,19 +235,69 @@ const draw = (ctx, height, width) => {
   (function frame() {
     resizeCanvas();
     ctx.clearRect(0, 0, width, height);
-    ctx.fillStyle = "#000000"; //背景色
+    //ctx.fillStyle = "#000000"; //背景色
+    ctx.fillStyle = "rgba(255, 255, 255, 0)";
     ctx.fillRect(0, 0, width, height);
 
-    DrawImg(300, 500, 0, 10);
+    /* ************修改下面的函数的参数****************/
+
+    DrawImg(cx, cy, 0, 10);
+
+    // DrawImg(-500, 150, 22, 4);   //2022
+    // DrawImg(-300, 400, 23, 4);   //元旦
+    // DrawImg(-350, 650, 24, 8);   //快乐
+
+    /* ************修改上面的函数的参数****************/
 
     time_n = time_n + 1;
+
+    // DrawImg(0,0, pathArr, 50);
 
     window.requestAnimationFrame(frame);
   })();
 };
 
 function FourierDraw() {
-  return <Canvas id="c" draw={draw} height={1000} width={1000} />;
+  var cx;
+  var cy;
+  var w;
+  var h;
+  var lineWidth;
+  var enlarge;
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    w = 400;
+    h = 250;
+    lineWidth = 0.5;
+    enlarge = 0.2;
+    cx = -555;
+    cy = 30;
+  } else {
+    w = 800;
+    h = 500;
+    lineWidth = 2;
+    enlarge = 1;
+    cx = -520;
+    cy = 150;
+  }
+
+  return (
+    <div className="draw-name">
+      <Canvas
+        id="c"
+        draw={draw}
+        height={h}
+        width={w}
+        lineWidth={lineWidth}
+        enlarge={enlarge}
+        cx={cx}
+        cy={cy}
+      />
+    </div>
+  );
 }
 
 export default FourierDraw;
