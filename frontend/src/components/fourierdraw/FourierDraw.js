@@ -179,28 +179,13 @@ const draw = (ctx, height, width, lineWidth, enlarge, cx, cy) => {
     DrawCircles(center_x, center_y, circleCounts[imgIndex], imgIndex, speed);
     DrawLines(center_x, center_y, circleCounts[imgIndex], imgIndex, speed);
     DrawPath(center_x, center_y, circleCounts[imgIndex], imgIndex, speed);
-    // DrawText(center_x, center_y,"图像宽：" + getImgCenterSize(imgIndex)[2] + " 高：" + getImgCenterSize(imgIndex)[3], -200, -40);
-    // DrawText(center_x, center_y, "图像中心: (" + center_x + ", " + center_y + ")", -200, -20);
-    // DrawText(center_x, center_y, "使用圆个数: " + circleCounts[imgIndex], -200, 0);
+
   }
 
   //pathArr[0] = shape;
 
   var resizeCanvas = function () {
-    /*
-    var ratio = height / width;
-    var cW = 0.5 * window.innerWidth;
-    var cH = cW * ratio;
-    if (width < cW * devicePixelRatio) {
-    c.width = cW * devicePixelRatio;
-    c.height = cH * devicePixelRatio;
-    }else {
-      c.width = width;
-      c.height = height;
-    }
-    */
-    //width = cW * devicePixelRatio;
-    //height = cH * devicePixelRatio;
+
     c.width = width;
     c.height = height;
     ctx.scale(devicePixelRatio, devicePixelRatio);
@@ -236,10 +221,6 @@ const draw = (ctx, height, width, lineWidth, enlarge, cx, cy) => {
     /* ************修改下面的函数的参数****************/
 
     DrawImg(cx, cy, 0, 10);
-
-    // DrawImg(-500, 150, 22, 4);   //2022
-    // DrawImg(-300, 400, 23, 4);   //元旦
-    // DrawImg(-350, 650, 24, 8);   //快乐
 
     /* ************修改上面的函数的参数****************/
 
